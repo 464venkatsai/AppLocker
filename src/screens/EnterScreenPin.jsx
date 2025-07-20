@@ -6,7 +6,9 @@ const EnterScreenPin = ({navigation}) => {
     const [pin, setPin] = useState("")
 
     const handleSubmitVerifyPin = async ()=>{
+        console.log("pressed")
         const app_pin = await AsyncStorage.getItem("app_pin");
+        console.log("app_pin",app_pin)
         app_pin === pin ? navigation.navigate("Home") : alert("Invalid Pin entered");
     }
 

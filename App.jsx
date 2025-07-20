@@ -13,7 +13,7 @@ const App = () => {
   const [initialRoute, setInitialRoute] = useState("SetupScreenPin");
   useEffect(() => {
     const checkPin = async () => {
-      const pin = AsyncStorage.getItem("app_pin");
+      const pin = await AsyncStorage.getItem("app_pin");
       setInitialRoute(pin ? "EnterScreenPin" : "SetupScreenPin");
     }
     checkPin();
@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
     height: "100%",
     display: "flex",
     flexDirection: "column",
-    marginTop: 50,
+    backgroundColor : "#D1E5F4",
   },
 })

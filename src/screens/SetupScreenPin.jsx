@@ -15,7 +15,6 @@ const SetupScreenPin = ({ navigation }) => {
         }
         await AsyncStorage.setItem("app_pin",pin);
         navigation.replace("Home")
-
     }
 
     return (
